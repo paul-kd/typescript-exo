@@ -1,21 +1,22 @@
 import { User } from './user';
-//import { UserType } from './usertype';
 
-function printUser(users: User) {
+function printUser(user: User) {
   const appTh: HTMLElement = document.getElementById('app-th');
-  if (users.name && users.firstname && users.age) {
-    return (appTh.innerHTML = `<td>${users.name}</td> 
-          <td>${users.firstname}</td>
-          <td>${users.age}</td>`);
+  if (<User>user)  {
+    return (appTh.innerHTML = `<td>${user.name}</td> 
+          <td>${user.firstname}</td>
+          <td>${user.age}</td>`);
   } else {
     appTh.innerHTML = `<td>Error</td>`;
   }
 }
 
-const users: User = {
+const first = {
   name: 'Doe',
   firstname: 'John',
   age: 33,
 };
 
-printUser(users);
+//console.log(typeof first);
+
+printUser(first);
