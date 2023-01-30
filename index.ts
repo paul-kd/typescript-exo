@@ -15,7 +15,6 @@ const first = {
   name: 'Doe',
   firstname: 'John',
   age: 33,
-  f:
 };
 
 //console.log(typeof User);
