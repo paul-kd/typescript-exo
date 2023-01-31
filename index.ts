@@ -2,7 +2,7 @@ import { User } from './user';
 
 function printUser(user: User) {
   const appTh: HTMLElement = document.getElementById('app-th');
-  if (<User>user)  {
+  if (<User>user) {
     return (appTh.innerHTML = `<td>${user.name}</td> 
           <td>${user.firstname}</td>
           <td>${user.age}</td>`);
@@ -11,12 +11,10 @@ function printUser(user: User) {
   }
 }
 
-const first = {
+const first: User = {
   name: 'Doe',
   firstname: 'John',
   age: 33,
 };
-
-//console.log(typeof User);
 
 printUser(first);
